@@ -48,6 +48,13 @@ final class PlayField extends FlxSprite {
 		camera3D = new ModchartCamera3D();
 		projection = new ModchartPerspective();
 
+        this.cameras = [PlayState.instance.camHUD];
+        arrowRenderer.cameras = [PlayState.instance.camHUD];
+        receptorRenderer.cameras = [PlayState.instance.camHUD];
+        attachmentRenderer.cameras = [PlayState.instance.camHUD];
+        holdRenderer.cameras = [PlayState.instance.camHUD];
+        pathRenderer.cameras = [PlayState.instance.camHUD];
+
 		// default mods
 		addModifier('reverse');
 		addModifier('confusion');
